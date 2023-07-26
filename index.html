@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogicMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Logic Master</h1>
+
+    <div>
+        <h2>Instruções de Uso:</h2>
+        <p>Insira as Fórmulas Bem Formuladas (FBFs) utilizando os botões abaixo para adicionar as operações lógicas. Os
+            botões disponíveis são:</p>
+        <ul>
+            <li>¬ (Negação): Representa a negação lógica, ou seja, inverte o valor de uma proposição. Exemplo: ¬A
+                significa "não A".</li>
+            <li>∧ (E): Representa a conjunção lógica, que só é verdadeira quando ambas as proposições são verdadeiras.
+                Exemplo: A ∧ B significa "A e B".</li>
+            <li>∨ (Ou): Representa a disjunção lógica, que é verdadeira se pelo menos uma das proposições é verdadeira.
+                Exemplo: A ∨ B significa "A ou B".</li>
+            <li>→ (Condicional): Representa a implicação lógica, que é verdadeira quando a proposição anterior implica
+                na proposição seguinte. Exemplo: A → B significa "Se A, então B".</li>
+            <li>↔ (Bicondicional): Representa a bicondicional lógica, que é verdadeira quando as proposições têm o mesmo
+                valor lógico. Exemplo: A ↔ B significa "A se e somente se B".</li>
+        </ul>
+
+        <p>Clique em "Calcular" para gerar a tabela verdade correspondente à Fórmula Bem Formulada (FBF) inserida.</p>
+
+        <p>Acompanhe a resolução passo a passo para entender o processo de análise da FBF e como a tabela verdade é
+            obtida.</p>
+
+        <h2>Observações:</h2>
+        <ul>
+            <li>Use o máximo de parênteses possíveis para evitar ambiguidades nas fórmulas.</li>
+            <li>São permitidas no máximo 5 variáveis proposicionais (A, B, C, D, E) na FBF.</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <h2>Fórmula:</h2>
+        <input type="text" id="formulaInput">
+
+        <div>
+            <button onclick="adicionarOperacao('¬')">¬</button>
+            <button onclick="adicionarOperacao('∧')">∧</button>
+            <button onclick="adicionarOperacao('∨')">∨</button>
+            <button onclick="adicionarOperacao('→')">→</button>
+            <button onclick="adicionarOperacao('↔')">↔</button>
+        </div>
+    </div>
+
+
+    <button id="calcularBtn">Calcular</button>
+
+
+    <div id="divTabela" style="display: none;">
+        <h2>Tabela Verdade:</h2>
+        <table id="tabelaVerdade">
+            <!-- A tabela verdade será preenchida aqui dinamicamente com JavaScript -->
+        </table>
+    </div>
+
+    <div id="divResolucao" style="display: none;">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
